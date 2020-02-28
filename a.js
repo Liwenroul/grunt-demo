@@ -1,3 +1,5 @@
+/*global $: true*/
+/*eslint quotes: ["error", "double"]*/
 $(function(){
     //get dom elem
     var $width=$("#width");
@@ -11,21 +13,21 @@ $(function(){
     }
     /**calc button click event */
     $btn.click(function(){
-    //get value
+        //get value
         var w=Number($width.val());
         var h=Number($height.val());
 
-    //判断小数点后的有效位数
+        //判断小数点后的有效位数
         var wlength=$width.val().split(".")[1].length;
         var hlength=$height.val().split(".")[1].length;
         var n1=wlength<hlength?hlength:wlength;
         var n2=wlength+hlength;
-    //calculate
+        //calculate
         var p=2*roundFractional(w+h,n1);
         var a=roundFractional(w*h,n2);
-    //output
+        //output
         $perimeter.val(p);
         $area.val(a);
-    })
+    });
     
 });
