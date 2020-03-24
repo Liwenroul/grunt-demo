@@ -1,14 +1,12 @@
 module.exports=function(grunt){
-    
     grunt.initConfig({
-        cssmin:{
-            'a.min.css':'a.css'
+        uglify:{
+            'a.min.js':'a.js'
         }
     });
 
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
-    
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
 
-    grunt.registerTask('default',['cssmin']);
+    grunt.registerTask('default',['uglify']);
 };
